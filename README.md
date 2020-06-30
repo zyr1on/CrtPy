@@ -3,5 +3,5 @@ Crt.py Made with Python3 for Enumerate Subdomain on Crt.sh
   <li> Usage: python3 crt.py domain</li>
 
 # Requirements
-  <li> requests </li>
+  <li> requests (pip3 install requests )</li>
   

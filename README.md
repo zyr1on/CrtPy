@@ -1,6 +1,6 @@
-# crt_urlopen.py
+# crt.py
 Crt.py Made with Python3 for Enumerate Subdomain on Crt.sh
-  <li> Usage: python3 crt_urlopem.py domain</li>
-
+  <li> Usage: python3 crt_urlopen.py domain</li>
+  <li> usage: python3 crt_requests.py domain </li>
 
   

@@ -7,5 +7,5 @@ Crt.py Made with Python3 for Enumerate Subdomain on Crt.sh
   <li>Python3 Requests Module </li>
   <li>Python3 Urllib Module </li>
 <h3> Setup </h3>
-  <code> pip/pip3 -m requirements.txt </code>
+  <code>$ pip/pip3 -m requirements.txt </code>
   

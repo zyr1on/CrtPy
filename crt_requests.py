@@ -5,15 +5,15 @@ import json
 import sys
 import argparse
 
-parser = argparse.ArgumentParser(description="CrtPy to enumerate Subdomain")
+parser = argparse.ArgumentParser(description="CrtPy to enumerate Subdomains from Crt.sh")
 parser.add_argument("--domain","-d",required=True,help="specify the target domain")
-parser.add_argument("--output","-o",required=False,help="set output")
+parser.add_argument("--output","-o",required=False,help="specify output file name")
 args = parser.parse_args()
 output = str(args.output)
 
 v = str("".join(sys.version))[0:3]
 if v < "3.6":
-    print("Python Version is old,Recomended 3.6+")
+    print("Python Version is old,Recommended 3.6+")
     exit()
 else:
         domain = args.domain

@@ -3,7 +3,6 @@
 import requests
 import json
 import sys
-import re
 import argparse
 
 parser = argparse.ArgumentParser(description="CrtPy to enumerate Subdomain")

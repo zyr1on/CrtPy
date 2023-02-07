@@ -21,8 +21,8 @@ else:
         url = (f"https://crt.sh/?q={domain}&output=json")
         req = requests.get(url).content
         data = json.loads(req)
-        for keys,values in enumerate(data):
-                domains = str(values['name_value'])
+        for a,b in enumerate(data):
+                domains = str(b['name_value'])
                 print(domains)
                 if output == None:
                         pass

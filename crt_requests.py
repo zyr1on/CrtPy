@@ -16,11 +16,13 @@ if v < "3.6":
     print("Python Version is old,Recommended 3.6+")
     exit()
 else:
+        req();
+def req():
         domain = args.domain
         print("Enumerating >> " , domain , "\n")
         url = (f"https://crt.sh/?q={domain}&output=json")
-        req = requests.get(url).content
-        data = json.loads(req)
+        data_req = requests.get(url).content
+        data = json.loads(data_req)
         for a,b in enumerate(data):
                 domains = str(b['name_value'])
                 print(domains)
@@ -31,4 +33,3 @@ else:
                 else:
                         file = open(output,"a")
                         file.write(domains)
-

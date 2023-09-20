@@ -33,3 +33,4 @@ def req():
                 else:
                         file = open(output,"a")
                         file.write(domains)
+                        file.close(output)

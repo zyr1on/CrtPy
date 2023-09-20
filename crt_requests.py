@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#author : @semihozdmirr
 import requests
 import json
 import sys
@@ -11,26 +10,23 @@ parser.add_argument("--output","-o",required=False,help="specify output file nam
 args = parser.parse_args()
 output = str(args.output)
 
-v = str("".join(sys.version))[0:3]
-if v < "3.6":
-    print("Python Version is old,Recommended 3.6+")
+if int(sys.version_info.major) < 3:
+    print("Run With Python3")
     exit()
 else:
-        req();
-def req():
-        domain = args.domain
-        print("Enumerating >> " , domain , "\n")
-        url = (f"https://crt.sh/?q={domain}&output=json")
-        data_req = requests.get(url).content
-        data = json.loads(data_req)
-        for a,b in enumerate(data):
-                domains = str(b['name_value'])
-                print(domains)
-                if output == None:
-                        pass
-                elif output == "None":
-                        pass
-                else:
-                        file = open(output,"a")
-                        file.write(domains)
-                        file.close(output)
+    domain = args.domain
+    print("Enumerating >> " , domain , "\n")
+    url = (f"https://crt.sh/?q={domain}&output=json")
+    data_req = requests.get(url).content
+    data = json.loads(data_req)
+    for a,b in enumerate(data):
+        domains = str(b['name_value'])
+        print(domains)
+        if output == None:
+            pass
+        elif output == "None":
+            pass
+        else:
+            file = open(output,"a")
+            file.write(domains)
+            file.close()

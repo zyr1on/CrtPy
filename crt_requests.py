@@ -27,7 +27,6 @@ try:
             print(domains)
     else:
         file = open(output,"a")
-        counter = 0
         for a,b in enumerate(data):
             domains = str(b['name_value'])
             file.write(domains)
